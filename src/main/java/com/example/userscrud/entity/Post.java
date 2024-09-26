@@ -11,9 +11,20 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@NoArgsConstructor
-@RequiredArgsConstructor
+
 public class Post {
+	
+	
+	
+	public Post() {
+		super();
+	}
+	public Post(Integer id, String description, User user) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.user = user;
+	}
 	
 	@Id
 	@GeneratedValue

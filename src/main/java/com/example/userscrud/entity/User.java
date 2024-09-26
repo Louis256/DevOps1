@@ -17,10 +17,26 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@NoArgsConstructor
-@RequiredArgsConstructor
+
 public class User {
 	
+	
+	
+	public User() {
+		super();
+	}
+
+	public User(Long id, @Size(min = 2, message = "name should have atleast 2 characters.") String name,
+			@NotBlank(message = "email is blank, please enter valid email address.") String email, String password,
+			List<Post> posts) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.posts = posts;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

@@ -1,6 +1,7 @@
 package com.example.userscrud.controller;
 
 import java.net.URI;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,18 @@ import com.example.userscrud.service.UserService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
+
+/**
+ * 
+ * Function -> Delete user on basis of its Name and if there are more than 1 u
+ * ser with same name you will throw the error saying "Multiple Users Found With 
+ * Same name, can't be deleted"
+ * 
+ * -> First set up basic jenkins pipeline.
+-> Push latest Code in Bit Bucket.
+-> Show me that latest feature gets deployed using Jenkins.
+ *
+ */
 @RestController
 @RequestMapping("/users")
 public class UserController {

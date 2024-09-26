@@ -11,7 +11,7 @@ import com.example.userscrud.repository.UserRepository;
 import lombok.AllArgsConstructor;
 
 @Service
-@AllArgsConstructor
+
 public class UserServiceImpl implements UserService {
 	
 	
