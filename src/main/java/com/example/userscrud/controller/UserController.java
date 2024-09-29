@@ -54,15 +54,26 @@ public class UserController {
 	public List<User> getAllUsers(){
 		return userService.getAllUsers();
 	}
-	
+	/**
 	@GetMapping("/{email}")
 	public User retrieveUser(@PathVariable String email) {
 		return userService.getUser(email);
 	}
+	**/
+	@GetMapping("/{name}")
+	public List<User> retrieveUserByName(@PathVariable String name) {
+		return userService.getUserByName(name);
+	}
 	
+	/**
 	@DeleteMapping("/{email}")
 	public void deleteUser(@PathVariable String email) {
 		userService.deleteUser(email);
+	}
+	**/
+	@DeleteMapping("/{name}")
+	public void deleteUserByName(@PathVariable String name) {
+		userService.deleteUserByName(name);
 	}
 	
 	@PostMapping("")
